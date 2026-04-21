@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Fundamentals course by Nazmun Sakib</title>
+    <meta name="description"
+        content="Master HTML, CSS, JavaScript, PHP & WordPress in 36 Hands-On Classes with Nazmun Sakib.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warm: {
+                            bg: '#0F0A08',
+                            surface: '#1A1512',
+                            border: '#2D2520',
+                            primary: '#FAF5F0',
+                            secondary: '#A89B8C',
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: {
+                        'float': 'float 6s infinite ease-in-out',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-20px) rotate(1deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-warm-border/50 bg-warm-bg/80 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div>
+                <a class="flex items-center gap-3" href="https://nazmunsakib.com">
+                    <img src="images/icons/logo.svg" alt="Logo" class="w-8 h-8 icon-amber">
+                    <span class="font-bold text-xl tracking-tight">Nazmun<span
+                            class="text-amber-500">Sakib</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-secondary">
+                <a href="#classes" class="hover:text-amber-500 transition-colors">Schedule</a>
+                <a href="#trainer" class="hover:text-amber-500 transition-colors">Trainer</a>
+                <a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 lg:pt-52 pb-20 px-6 overflow-hidden">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-amber-500/10 blur-[120px] rounded-full -z-10">
+        </div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span
+                        class="px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-500 text-xs font-bold uppercase tracking-wider">Platform:
+                        Debidwar Movement</span>
+                    <span
+                        class="px-3 py-1 rounded-full border border-rose-500/30 bg-rose-500/10 text-rose-500 text-xs font-bold uppercase tracking-wider">Led
+                        by Nazmun Sakib</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-[1.1]">Web Development <span
+                        class="text-transparent bg-clip-text accent-gradient">Fundamentals</span></h1>
+                <p class="text-xl text-warm-secondary mb-10 max-w-xl">Master HTML, CSS, JavaScript, PHP & WordPress in
+                    36 Hands-On Classes. Build industry-grade projects from scratch.</p>
+            </div>
+            <div class="relative reveal delay-200">
+                <div class="animate-float">
+                    <div class="glass rounded-2xl p-4 shadow-2xl relative z-10 inner-glow overflow-hidden">
+                        <div class="flex gap-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-rose-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-amber-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-emerald-500/50"></div>
+                        </div>
+                        <div class="space-y-3 font-mono text-sm leading-relaxed">
+                            <p class="text-rose-400">&lt;section <span class="text-amber-300">class</span>=<span
+                                    class="text-emerald-400">"hero"</span>&gt;</p>
+                            <p class="pl-4 text-warm-primary">&lt;h1&gt;Building the Future&lt;/h1&gt;</p>
+                            <p class="pl-4 text-warm-secondary italic">// Initialize course engine</p>
+                            <p class="pl-4 text-amber-300">const <span class="text-warm-primary">success</span> = () =>
+                                {</p>
+                            <p class="pl-8 text-warm-primary">return <span class="text-emerald-400">"Mastered"</span>;
+                            </p>
+                            <p class="pl-4 text-amber-300">};</p>
+                            <p class="text-rose-400">&lt;/section&gt;</p>
+                        </div>
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-rose-500/20 blur-3xl rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="py-24 px-6 bg-warm-surface/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-extrabold mb-4">The Road to <span class="text-amber-500">Mastery</span></h2>
+                <p class="text-warm-secondary max-w-2xl mx-auto">A comprehensive 7-phase journey from zero to
+                    professional developer.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Phase 1 -->
+                <div class="reveal glass p-8 rounded-2xl hover:-translate-y-2 transition-all">
+                    <div class="text-amber-500 font-bold mb-2">Phase 1</div>
+                    <h3 class="text-xl font-bold mb-4">Web Basics + HTML</h3>
+                    <p class="text-xs font-bold text-warm-primary mb-2 uppercase opacity-60">Goal: Build Structure</p>
+                    <p class="text-xs text-warm-secondary italic mb-4">Class 1–6</p>
+                    <p class="text-sm text-warm-secondary">How the web works, HTML tag structure, and semantic elements.
+                    </p>
+                </div>
+                <!-- Phase 2 -->
+                <div class="reveal glass p-8 rounded-2xl hover:-translate-y-2 transition-all">
+                    <div class="text-amber-500 font-bold mb-2">Phase 2</div>
+                    <h3 class="text-xl font-bold mb-4">CSS Fundamentals</h3>
+                    <p class="text-xs font-bold text-warm-primary mb-2 uppercase opacity-60">Goal: Design and Layout</p>
+                    <p class="text-xs text-warm-secondary italic mb-4">Class 7–12</p>
+                    <p class="text-sm text-warm-secondary">Box model, Flexbox, and mobile-first responsive design.</p>
+                </div>
+                <!-- Phase 3 -->
+                <div class="reveal glass p-8 rounded-2xl hover:-translate-y-2 transition-all">
+                    <div class="text-amber-500 font-bold mb-2">Phase 3</div>
+                    <h3 class="text-xl font-bold mb-4">Advanced UI</h3>
+                    <p class="text-xs font-bold text-warm-primary mb-2 uppercase opacity-60">Goal: Modern Frameworks</p>
+                    <p class="text-xs text-warm-secondary italic mb-4">Class 13–16</p>
+                    <p class="text-sm text-warm-secondary">CSS Grid, Animations, Bootstrap, and Tailwind CSS.</p>
+                </div>
+                <!-- Phase 4 -->
+                <div class="reveal glass p-8 rounded-2xl hover:-translate-y-2 transition-all">
+                    <div class="text-amber-500 font-bold mb-2">Phase 4</div>
+                    <h3 class="text-xl font-bold mb-4">JavaScript Basics</h3>
+                    <p class="text-xs font-bold text-warm-primary mb-2 uppercase opacity-60">Goal: Logic & Interactivity
+                    </p>
+                    <p class="text-xs text-warm-secondary italic mb-4">Class 17–22</p>
+                    <p class="text-sm text-warm-secondary">Variables, loops, DOM manipulation, and interactive apps.</p>
+                </div>
+                <!-- Phase 5 -->
+                <div class="reveal glass p-8 rounded-2xl hover:-translate-y-2 transition-all">
+                    <div class="text-amber-500 font-bold mb-2">Phase 5</div>
+                    <h3 class="text-xl font-bold mb-4">jQuery</h3>
+                    <p class="text-xs font-bold text-warm-primary mb-2 uppercase opacity-60">Goal: Practical Effects</p>
+                    <p class="text-xs text-warm-secondary italic mb-4">Class 23–25</p>
+                    <p class="text-sm text-warm-secondary">DOM handling, AJAX basics, and quick UI transitions.</p>
+                </div>
+                <!-- Phase 6 -->
+                <div class="reveal glass p-8 rounded-2xl hover:-translate-y-2 transition-all">
+                    <div class="text-amber-500 font-bold mb-2">Phase 6</div>
+                    <h3 class="text-xl font-bold mb-4">PHP Basics</h3>
+                    <p class="text-xs font-bold text-warm-primary mb-2 uppercase opacity-60">Goal: Backend Understanding
+                    </p>
+                    <p class="text-xs text-warm-secondary italic mb-4">Class 26–30</p>
+                    <p class="text-sm text-warm-secondary">Syntax, variables, forms handling, and CRUD logic.</p>
+                </div>
+                <!-- Phase 7 -->
+                <div class="reveal glass p-8 rounded-2xl hover:-translate-y-2 transition-all border-amber-500/40">
+                    <div class="text-amber-500 font-bold mb-2">Phase 7</div>
+                    <h3 class="text-xl font-bold mb-4">WordPress + Git</h3>
+                    <p class="text-xs font-bold text-warm-primary mb-2 uppercase opacity-60">Goal: Real-world workflow
+                    </p>
+                    <p class="text-xs text-warm-secondary italic mb-4">Class 31–36</p>
+                    <p class="text-sm text-warm-secondary">Custom themes, Gutenberg, Git/GitHub, and live deployment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Table Section -->
+    <section id="classes" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-extrabold mb-4">Detailed <span class="text-amber-500">Class Breakdown</span>
+                </h2>
+                <p class="text-warm-secondary">A roadmap of all 36 sessions and the skills you will gain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 reveal overflow-hidden">
+                <!-- Class 01 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 01: <span
+                            class="text-warm-secondary uppercase tracking-tight">Setup</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Intro & Roadmap</li>
+                        <li>Tools (VS Code)</li>
+                        <li>Client-Server/HTTP</li>
+                    </ul>
+                </div>
+                <!-- Class 02 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 02: <span
+                            class="text-warm-secondary uppercase tracking-tight">HTML Basics</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Tag Structure</li>
+                        <li>Headings & Paragraph</li>
+                    </ul>
+                </div>
+                <!-- Class 03 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 03: <span
+                            class="text-warm-secondary uppercase tracking-tight">Content</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Links & Images</li>
+                        <li>List Types</li>
+                    </ul>
+                </div>
+                <!-- Class 04 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 04: <span
+                            class="text-warm-secondary uppercase tracking-tight">Forms</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Inputs & Textarea</li>
+                        <li>Button logic</li>
+                    </ul>
+                </div>
+                <!-- Class 05 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 05: <span
+                            class="text-warm-secondary uppercase tracking-tight">Semantics</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Header/Footer</li>
+                        <li>Section/Article</li>
+                    </ul>
+                </div>
+                <!-- Class 06 -->
+                <div
+                    class="p-6 rounded-xl border border-amber-500/40 bg-white/[0.03] hover:border-amber-500 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 06: <span
+                            class="text-warm-secondary uppercase tracking-tight">Project</span></div>
+                    <ul class="text-xs text-warm-primary space-y-1.5 opacity-100">
+                        <li>Static Webpage</li>
+                        <li>Portfolio Structure</li>
+                    </ul>
+                </div>
+                <!-- Class 07 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 07: <span
+                            class="text-warm-secondary uppercase tracking-tight">CSS Intro</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Selectors & Cascading</li>
+                        <li>Colors usage</li>
+                    </ul>
+                </div>
+                <!-- Class 08 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 08: <span
+                            class="text-warm-secondary uppercase tracking-tight">Design</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Typography</li>
+                        <li>Box Model essentials</li>
+                    </ul>
+                </div>
+                <!-- Class 09 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 09: <span
+                            class="text-warm-secondary uppercase tracking-tight">Layout</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Display modes</li>
+                        <li>Positioning logic</li>
+                    </ul>
+                </div>
+                <!-- Class 10 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 10: <span
+                            class="text-warm-secondary uppercase tracking-tight">Flexbox</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Align & Justify</li>
+                        <li>Flex Wrap</li>
+                    </ul>
+                </div>
+                <!-- Class 11 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 11: <span
+                            class="text-warm-secondary uppercase tracking-tight">Responsive</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Media Queries</li>
+                        <li>Viewport logic</li>
+                    </ul>
+                </div>
+                <!-- Class 12 -->
+                <div
+                    class="p-6 rounded-xl border border-amber-500/40 bg-white/[0.03] hover:border-amber-500 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 12: <span
+                            class="text-warm-secondary uppercase tracking-tight">Project</span></div>
+                    <ul class="text-xs text-warm-primary space-y-1.5 opacity-100">
+                        <li>Resp. Landing Page</li>
+                        <li>Live Deployment</li>
+                    </ul>
+                </div>
+                <!-- Class 13 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 13: <span
+                            class="text-warm-secondary uppercase tracking-tight">CSS Grid</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Grid Template</li>
+                        <li>Gap & Areas</li>
+                    </ul>
+                </div>
+                <!-- Class 14 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 14: <span
+                            class="text-warm-secondary uppercase tracking-tight">Motion</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Transitions</li>
+                        <li>Animations/Keyframes</li>
+                    </ul>
+                </div>
+                <!-- Class 15 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 15: <span
+                            class="text-warm-secondary uppercase tracking-tight">Bootstrap</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Components Intro</li>
+                        <li>Grid Framework</li>
+                    </ul>
+                </div>
+                <!-- Class 16 -->
+                <div
+                    class="p-6 rounded-xl border border-amber-500/40 bg-white/[0.03] hover:border-amber-500 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 16: <span
+                            class="text-warm-secondary uppercase tracking-tight">Tailwind + Project</span></div>
+                    <ul class="text-xs text-warm-primary space-y-1.5 opacity-100">
+                        <li>Tailwind Basics</li>
+                        <li>UI Clone Project</li>
+                    </ul>
+                </div>
+                <!-- Class 17 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 17: <span
+                            class="text-warm-secondary uppercase tracking-tight">JS Intro</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Variables (let/const)</li>
+                        <li>Primitive Data Types</li>
+                    </ul>
+                </div>
+                <!-- Class 18 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 18: <span
+                            class="text-warm-secondary uppercase tracking-tight">Operators</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Math & Comparison</li>
+                        <li>Conditionals (if/else)</li>
+                    </ul>
+                </div>
+                <!-- Class 19 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 19: <span
+                            class="text-warm-secondary uppercase tracking-tight">Loops</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>For/While loops</li>
+                        <li>Iterator logic</li>
+                    </ul>
+                </div>
+                <!-- Class 20 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 20: <span
+                            class="text-warm-secondary uppercase tracking-tight">Functions</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Declarations</li>
+                        <li>Returns & Parameters</li>
+                    </ul>
+                </div>
+                <!-- Class 21 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 21: <span
+                            class="text-warm-secondary uppercase tracking-tight">DOM</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Selectors (query)</li>
+                        <li>Content manipulation</li>
+                    </ul>
+                </div>
+                <!-- Class 22 -->
+                <div
+                    class="p-6 rounded-xl border border-amber-500/40 bg-white/[0.03] hover:border-amber-500 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 22: <span
+                            class="text-warm-secondary uppercase tracking-tight">Events + Project</span></div>
+                    <ul class="text-xs text-warm-primary space-y-1.5 opacity-100">
+                        <li>Listeners (Click/Key)</li>
+                        <li>TO-DO App Build</li>
+                    </ul>
+                </div>
+                <!-- Class 23 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 23: <span
+                            class="text-warm-secondary uppercase tracking-tight">jQuery Intro</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Sizzle Selectors</li>
+                        <li>Document Ready</li>
+                    </ul>
+                </div>
+                <!-- Class 24 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 24: <span
+                            class="text-warm-secondary uppercase tracking-tight">jQuery UI</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Fade/Slide effects</li>
+                        <li>Chained animation</li>
+                    </ul>
+                </div>
+                <!-- Class 25 -->
+                <div
+                    class="p-6 rounded-xl border border-amber-500/40 bg-white/[0.03] hover:border-amber-500 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 25: <span
+                            class="text-warm-secondary uppercase tracking-tight">AJAX + Project</span></div>
+                    <ul class="text-xs text-warm-primary space-y-1.5 opacity-100">
+                        <li>Async Requests</li>
+                        <li>Data Fetching UI</li>
+                    </ul>
+                </div>
+                <!-- Class 26 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 26: <span
+                            class="text-warm-secondary uppercase tracking-tight">PHP Intro</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Tags & Syntax</li>
+                        <li>Variables logic</li>
+                    </ul>
+                </div>
+                <!-- Class 27 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 27: <span
+                            class="text-warm-secondary uppercase tracking-tight">PHP Flow</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Conditions</li>
+                        <li>Loops execution</li>
+                    </ul>
+                </div>
+                <!-- Class 28 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 28: <span
+                            class="text-warm-secondary uppercase tracking-tight">Forms</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>GET/POST handling</li>
+                        <li>Sanitization</li>
+                    </ul>
+                </div>
+                <!-- Class 29 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 29: <span
+                            class="text-warm-secondary uppercase tracking-tight">CRUD Logic</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Basic Create/Read</li>
+                        <li>Simple DB Connect</li>
+                    </ul>
+                </div>
+                <!-- Class 30 -->
+                <div
+                    class="p-6 rounded-xl border border-amber-500/40 bg-white/[0.03] hover:border-amber-500 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 30: <span
+                            class="text-warm-secondary uppercase tracking-tight">PHP Project</span></div>
+                    <ul class="text-xs text-warm-primary space-y-1.5 opacity-100">
+                        <li>PHP Contact Form</li>
+                        <li>
+                        <li>Email processing</li>
+                    </ul>
+                </div>
+                <!-- Class 31 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 31: <span
+                            class="text-warm-secondary uppercase tracking-tight">WP Setup</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Installation</li>
+                        <li>Dashboard tour</li>
+                    </ul>
+                </div>
+                <!-- Class 32 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 32: <span
+                            class="text-warm-secondary uppercase tracking-tight">Hierarchy</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Template logic</li>
+                        <li>index.php structure</li>
+                    </ul>
+                </div>
+                <!-- Class 33 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 33: <span
+                            class="text-warm-secondary uppercase tracking-tight">Conversion</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>HTML to Theme</li>
+                        <li>Header/Footer.php</li>
+                    </ul>
+                </div>
+                <!-- Class 34 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 34: <span
+                            class="text-warm-secondary uppercase tracking-tight">Gutenberg</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Block Basics</li>
+                        <li>Content Editing</li>
+                    </ul>
+                </div>
+                <!-- Class 35 -->
+                <div
+                    class="p-6 rounded-xl border border-warm-border bg-white/[0.03] hover:border-amber-500/40 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 35: <span
+                            class="text-warm-secondary uppercase tracking-tight">Git/GitHub</span></div>
+                    <ul
+                        class="text-xs text-warm-primary space-y-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>Init/Commit/Push</li>
+                        <li>Version Mastery</li>
+                    </ul>
+                </div>
+                <!-- Class 36 -->
+                <div
+                    class="p-6 rounded-xl border border-amber-500/40 bg-amber-500/10 hover:shadow-2xl hover:shadow-amber-500/20 transition-all flex flex-col items-start group">
+                    <div class="text-amber-500 font-bold text-xs mb-2">Class 36: <span
+                            class="text-warm-secondary font-extrabold uppercase tracking-tight">Live Deployment</span>
+                    </div>
+                    <ul class="text-xs text-warm-primary space-y-1.5 opacity-100">
+                        <li>Final Demo</li>
+                        <li>Going Online!</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="mt-8 p-6 rounded-xl bg-amber-500/5 border border-amber-500/20 flex items-center justify-center gap-3 reveal">
+                <img src="images/icons/rocket.svg" alt="Launch" class="w-5 h-5 icon-amber">
+                <p class="text-amber-500 font-bold">100% Free Enrollment — No Hidden Costs for 2026 Batch</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capstone Section -->
+    <section class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 reveal">
+                    <h2 class="text-4xl font-extrabold mb-8 flex items-center gap-4">
+                        <img src="images/icons/target.svg" alt="Target" class="w-10 h-10 icon-amber">
+                        <span>Final <span class="text-rose-500">Capstone</span> Project</span>
+                    </h2>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-xl bg-warm-surface border border-warm-border inner-glow">
+                            <img src="images/icons/laptop.svg" alt="Website" class="w-8 h-8 mb-4 icon-amber">
+                            <h4 class="font-bold text-warm-primary mb-2">Build full website</h4>
+                            <p class="text-xs text-warm-secondary leading-relaxed">HTML, CSS, JS combined.</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-warm-surface border border-warm-border inner-glow">
+                            <img src="images/icons/gear.svg" alt="Logic" class="w-8 h-8 mb-4 icon-amber">
+                            <h4 class="font-bold text-warm-primary mb-2">Add PHP/WordPress</h4>
+                            <p class="text-xs text-warm-secondary leading-relaxed">Dynamic logic implementation.</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-warm-surface border border-warm-border inner-glow">
+                            <img src="images/icons/github.svg" alt="GitHub" class="w-8 h-8 mb-4 icon-secondary">
+                            <h4 class="font-bold text-warm-primary mb-2">Push to GitHub</h4>
+                            <p class="text-xs text-warm-secondary leading-relaxed">Master version control.</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-warm-surface border border-warm-border inner-glow">
+                            <img src="images/icons/rocket.svg" alt="Deploy" class="w-8 h-8 mb-4 icon-amber">
+                            <h4 class="font-bold text-warm-primary mb-2">Deploy Live</h4>
+                            <p class="text-xs text-warm-secondary leading-relaxed">Launch your project live.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative reveal delay-200">
+                    <div class="glass p-2 rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+                        <div class="h-[400px] bg-warm-bg rounded-xl relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-b from-amber-500/10 to-transparent opacity-50">
+                            </div>
+                            <div
+                                class="absolute inset-0 w-full h-1 bg-amber-500/20 animate-[scan_4s_linear_infinite] top-0 pointer-events-none">
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 p-8">
+                                <div class="col-span-3 h-12 rounded bg-white/5 flex items-center px-4">
+                                    <div class="w-24 h-2 bg-white/20 rounded"></div>
+                                </div>
+                                <div class="h-32 rounded bg-white/5"></div>
+                                <div class="h-32 rounded bg-white/5"></div>
+                                <div class="h-32 rounded bg-white/5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainer Section -->
+    <section id="trainer" class="py-24 px-6 bg-warm-surface/20">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <div class="relative inline-block mb-10">
+                <div class="w-48 h-48 rounded-full border-4 border-amber-500/30 p-2">
+                    <div class="w-full h-full rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="images/nazmun-sakib.jpg" alt="Nazmun Sakib" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="absolute -bottom-2 right-0 px-3 py-1 bg-amber-500 text-black font-bold text-[10px] rounded">
+                    LEAD TRAINER</div>
+            </div>
+            <h2 class="text-3xl font-extrabold mb-2">Nazmun Sakib</h2>
+            <div class="text-amber-500 font-medium mb-6">Lead Web Engineer at Dynamic Web Lab.</div>
+            <p class="text-warm-secondary text-lg leading-relaxed max-w-2xl mx-auto italic">
+                Building scalable Web Solutions, WordPress Plugins, WooCommerce Extension.
+            </p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="reveal p-8 rounded-2xl glass hover:bg-white/[0.05] transition-all">
+                <img src="images/icons/project.svg" class="w-12 h-12 mb-6 icon-amber">
+                <h3 class="text-xl font-bold mb-3">Project-Based Learning</h3>
+                <p class="text-warm-secondary text-sm">Build real sites from day one.</p>
+            </div>
+            <div class="reveal p-8 rounded-2xl glass hover:bg-white/[0.05] transition-all">
+                <img src="images/icons/stack.svg" class="w-12 h-12 mb-6 icon-amber">
+                <h3 class="text-xl font-bold mb-3">Industry-Ready Stack</h3>
+                <p class="text-warm-secondary text-sm">Modern tools like Tailwind and WordPress.</p>
+            </div>
+            <div class="reveal p-8 rounded-2xl glass hover:bg-white/[0.05] transition-all">
+                <img src="images/icons/progression.svg" class="w-12 h-12 mb-6 icon-amber">
+                <h3 class="text-xl font-bold mb-3">Step-by-Step</h3>
+                <p class="text-warm-secondary text-sm">Balanced curriculum for all levels.</p>
+            </div>
+            <div class="reveal p-8 rounded-2xl glass hover:bg-white/[0.05] transition-all">
+                <img src="images/icons/access.svg" class="w-12 h-12 mb-6 icon-amber">
+                <h3 class="text-xl font-bold mb-3">Lifetime Access</h3>
+                <p class="text-warm-secondary text-sm">Learn at your own pace forever.</p>
+            </div>
+            <div class="reveal p-8 rounded-2xl glass hover:bg-white/[0.05] transition-all">
+                <img src="images/icons/certificate.svg" class="w-12 h-12 mb-6 icon-amber">
+                <h3 class="text-xl font-bold mb-3">Certification</h3>
+                <p class="text-warm-secondary text-sm">Verified certificate of completion.</p>
+            </div>
+            <div class="reveal p-8 rounded-2xl glass hover:bg-white/[0.05] transition-all">
+                <img src="images/icons/support.svg" class="w-12 h-12 mb-6 icon-amber">
+                <h3 class="text-xl font-bold mb-3">Community</h3>
+                <p class="text-warm-secondary text-sm">24/7 peer and mentor support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 bg-warm-surface/10">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-center text-3xl font-extrabold mb-16 reveal">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="faq-item reveal glass rounded-xl border border-warm-border overflow-hidden cursor-pointer">
+                    <div class="p-6 flex items-center justify-between font-bold">
+                        <span>Is this course really 100% free?</span>
+                        <img src="images/icons/chevron.svg" class="chevron w-5 h-5 icon-secondary transition-transform">
+                    </div>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-warm-secondary text-sm">
+                            Absolutely. This initiative is part of the Debidwar Movement to provide quality tech
+                            education with no hidden costs for the 2026 batch.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item reveal glass rounded-xl border border-warm-border overflow-hidden cursor-pointer">
+                    <div class="p-6 flex items-center justify-between font-bold">
+                        <span>Is the classes held online or offline?</span>
+                        <img src="images/icons/chevron.svg" class="chevron w-5 h-5 icon-secondary transition-transform">
+                    </div>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-warm-secondary text-sm">
+                            The course is primarily online, allowing you to learn from the comfort of your home while
+                            receiving support via our dedicated online community.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item reveal glass rounded-xl border border-warm-border overflow-hidden cursor-pointer">
+                    <div class="p-6 flex items-center justify-between font-bold">
+                        <span>What do I need to start this course?</span>
+                        <img src="images/icons/chevron.svg" class="chevron w-5 h-5 icon-secondary transition-transform">
+                    </div>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-warm-secondary text-sm">
+                            All you need is a laptop or desktop computer, a stable internet connection, and basic
+                            computer knowledge (file management and browsing).
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item reveal glass rounded-xl border border-warm-border overflow-hidden cursor-pointer">
+                    <div class="p-6 flex items-center justify-between font-bold">
+                        <span>Can I learn using only a mobile phone?</span>
+                        <img src="images/icons/chevron.svg" class="chevron w-5 h-5 icon-secondary transition-transform">
+                    </div>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-warm-secondary text-sm">
+                            While you can watch tutorials on mobile, a computer is mandatory for coding and building
+                            projects. We recommend a system with at least 4GB RAM.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item reveal glass rounded-xl border border-warm-border overflow-hidden cursor-pointer">
+                    <div class="p-6 flex items-center justify-between font-bold">
+                        <span>Do I need prior coding knowledge?</span>
+                        <img src="images/icons/chevron.svg" class="chevron w-5 h-5 icon-secondary transition-transform">
+                    </div>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-warm-secondary text-sm">
+                            No, this course is designed for absolute beginners. We will guide you from the very first
+                            HTML tag to building advanced WordPress themes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-warm-border bg-warm-bg">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div>
+                <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                    <img src="images/icons/logo.svg" class="w-6 h-6 icon-amber">
+                    <span class="font-bold">Nazmun Sakib</span>
+                </div>
+                <p class="text-xs text-warm-secondary">© 2026. All Rights Reserved.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://www.facebook.com/great.sakib/"><img src="images/icons/facebook.svg"
+                        class="w-6 h-6 icon-secondary hover:icon-amber transition-all"></a>
+                <a href="https://www.linkedin.com/in/nazmunsakib/"><img src="images/icons/linkedin.svg"
+                        class="w-6 h-6 icon-secondary hover:icon-amber transition-all"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
