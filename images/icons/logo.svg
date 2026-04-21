@@ -1,5 +1,21 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Modern Tech-focused LWS Logo -->
+    <defs>
+        <linearGradient id="lwsGradient" x1="0" y1="0" x2="120" y2="40" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F59E0B"/>
+            <stop offset="1" stop-color="#D97706"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- L -->
+    <path d="M10 5V30C10 32.7614 12.2386 35 15 35H30" stroke="url(#lwsGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- W -->
+    <path d="M40 10L50 35L60 15L70 35L80 10" stroke="url(#lwsGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- S -->
+    <path d="M110 10C110 7.23858 107.761 5 105 5H95C92.2386 5 90 7.23858 90 10V15C90 17.7614 92.2386 20 95 20H105C107.761 20 110 22.2386 110 25V30C110 32.7614 107.761 35 105 35H95C92.2386 35 90 32.7614 90 30" stroke="url(#lwsGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Accent Element -->
+    <circle cx="115" cy="5" r="3" fill="#F59E0B"/>
 </svg>
